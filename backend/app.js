@@ -9,8 +9,9 @@ var usersRouter = require('./routes/users');
 var messagesRouter = require('./routes/messages')
 var roomsRouter = require('./routes/rooms')
 var app = express();
+var cors = require('cors');
 const db = require('./db/db_connect');
-
+app.use(cors())
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
